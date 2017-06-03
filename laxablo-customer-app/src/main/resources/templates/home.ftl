@@ -8,10 +8,7 @@
 <body>
 
 <header>
-    <a href="http://localhost:9095/portal4customer">home</a>
-    <br>
     <a href="${productServiceUrl}">Products</a>
-    
 </header>
 
 <h1>${serviceName}</h1>

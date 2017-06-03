@@ -9,8 +9,9 @@
  * in the user guide at http://gradle.org/docs/2.3/userguide/multi_project_builds.html
  */
 
-rootProject.name = 'laxablo-demo'
+rootProject.name = 'laxablo-LPRO'
 
 include 'database-service'
 include 'customer-app'
 include 'product-app'
+include 'laxablo-customer-app'

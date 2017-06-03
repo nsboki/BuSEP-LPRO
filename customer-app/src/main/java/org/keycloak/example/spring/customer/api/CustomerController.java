@@ -41,6 +41,7 @@ public class CustomerController {
         return "customers";
     }
 
+    
     @RequestMapping(value = "/admin", method = RequestMethod.GET)
     public String handleAdminRequest(Principal principal, Model model) {
         model.addAttribute("principal",  principal);

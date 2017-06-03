@@ -17,17 +17,17 @@ public class CustomerApp extends SpringBootServletInitializer {
         SpringApplication.run(CustomerApp.class, args);
     }
 
-    /**
-     * Initializes this application when running in a servlet container (e.g. Tomcat)
-     */
-    @Override
-    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(CustomerApp.class);
-    }
-
-    @Bean
-    public CacheControlHandlerInterceptor cacheControlHandlerInterceptor() {
-        return new CacheControlHandlerInterceptor();
-    }
+//    /**
+//     * Initializes this application when running in a servlet container (e.g. Tomcat)
+//     */
+//    @Override
+//    protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+//        return application.sources(CustomerApp.class);
+//    }
+//
+//    @Bean
+//    public CacheControlHandlerInterceptor cacheControlHandlerInterceptor() {
+//        return new CacheControlHandlerInterceptor();
+//    }
 
 }
