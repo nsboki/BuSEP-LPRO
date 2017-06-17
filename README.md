@@ -1,6 +1,6 @@
-# Keycloak Spring Security Examples
+# BuSEP-LPRO with Keycloak Spring Security
 
-Demonstrates how to use the Keycloak Spring Security adapter, including:
+Demonstrates how one or more then one aplication with the Keycloak Spring Security adapter, including:
 
 * Login
 * Distributed SSO
@@ -11,7 +11,7 @@ Demonstrates how to use the Keycloak Spring Security adapter, including:
 
 The following examples are standalone Spring Boot applications.
 
-They require the Keycloak appliance 1.2.0, running locally on port 8080 (the default for the
+They require the Keycloak appliance 3.1.0, running locally on port 8080 (the default for the
 standalone appliance).
 
 There are multiple Spring Boot projects.  These will all run on independently on the localhost
@@ -19,7 +19,8 @@ listening on differnt ports.
 
 * **customer-app** A Spring Boot application that does remote login using OAuth2 browser redirects with the auth server
 * **product-app** A Spring Boot application that does remote login using OAuth2 browser redirects with the auth server
-* **database-service** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data.
+* **database-service-sql** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data.
+* **database-service-nosql** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data.
 
 
 ### Step 1: Make sure you've set up the Keycloak Server
@@ -33,8 +34,7 @@ Where you go to start up the Keycloak Server depends on which distro you install
 From appliance:
 
 ```
-$ cd keycloak/bin
-$ ./standalone.sh
+cd keycloak/bin/standalone.sh
 ```
 
 ### Step 3: Import the Test Realm
@@ -45,7 +45,7 @@ realm page.
 
 http://localhost:8080/auth/admin/master/console/#/create/realm
 
-Import the spring-demo-realm.json file that is in this project's root directory.
+Import the laxablo-realm.json file that is in this project's root directory.
 
 
 ### Step 4: Build and deploy
@@ -53,10 +53,12 @@ Import the spring-demo-realm.json file that is in this project's root directory.
 Launch each application (use a new terminal for each application):
 
 ```
-$ ./gradlew database-service:bootRun
-$ ./gradlew customer-app:bootRun
-$ ./gradlew product-app:bootRun
+/gradlew customer-app:bootRun
+/gradlew product-app:bootRun
+/gradlew database-service-sql:bootRun
+/gradlew database-service-nosql:bootRun
 ```
+
 
 ### Step 5: Login and Observe Apps
 
@@ -64,7 +66,7 @@ Try going to the customer app and view customer data:
 
 http://localhost:9092/customer-portal/
 
-This should take you to the auth-server login screen.  Enter username: srossillo and password: password.
+This should take you to the auth-server login screen.  Enter username: test User and password: test.
 
 If you click on the products link, you'll be taken to the products app and show a product listing.  The redirects
 are still happening, but the auth-server knows you are already logged in so the login is bypassed.
