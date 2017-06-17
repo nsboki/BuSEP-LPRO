@@ -2,9 +2,13 @@ server:
   port: 9092
   contextPath: /customer-portal
 
-database:
+databasens:
   service:
-    url: http://localhost:9091/database/customers
+    url: http://localhost:9099/databasens/customers
+    
+databases:
+  service:
+    url: http://localhost:9091/databases/customers
 
 product:
   service:

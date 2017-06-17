@@ -18,6 +18,7 @@
 
 <ul>
     <li><a href="<@spring.url '/customers' />">Customer Listing</a></li>
+    <li><a href="<@spring.url '/sqlCustomers' />">Sql Customer Listing</a></li>
     <li><a href="<@spring.url '/admin' />">Customer Admin Page</a></li>
 </ul>
 </body>
