@@ -39,6 +39,9 @@ subprojects {
         compile "org.keycloak:keycloak-spring-security-adapter:${keycloakVersion}"
         compile "net.rossillo.mvc.cache:spring-mvc-cache-control:1.1.1-RELEASE"
 
+		
+		
+
         testCompile "org.springframework.boot:spring-boot-starter-test:${springBootVersion}"
     }
 }
@@ -51,8 +54,18 @@ project('customer-app') {
     }
 }
 
+project('database-service-sql') {
+    dependencies {
+        compile "mysql:mysql-connector-java:6.0.6"
+		compile("org.springframework.boot:spring-boot-starter-data-jpa")
+    }
+}
+
+
 project('product-app') {
     dependencies {
         compile "org.springframework.boot:spring-boot-starter-freemarker:${springBootVersion}"
+        compile "org.springframework:spring-web:${springVersion}"
+        compile "org.springframework:spring-webmvc:${springVersion}"
     }
 }

@@ -23,4 +23,5 @@ app.controller('MainCtrl', function($scope, $sce) {
   }
 
   $scope.customers = {src:"http://localhost:9092/customer-portal/", title:"Egghead.io AngularJS Binding"};
+  $scope.products = {src:"http://localhost:9093/product-portal/", title:"Egghead.io AngularJS Binding"};
 });

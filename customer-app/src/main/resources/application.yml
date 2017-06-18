@@ -14,6 +14,3 @@ product:
   service:
     url: http://localhost:9093/product-portal/
 
-spring:
-  freemarker:
-    cache: false

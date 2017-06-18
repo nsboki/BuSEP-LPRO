@@ -20,7 +20,7 @@ public class RemoteProductService implements ProductService {
     private KeycloakRestTemplate template;
 
     @NotNull
-    @Value("${database.service.url}")
+    @Value("${databasens.service.url}")
     private String endpoint;
 
     @Override
