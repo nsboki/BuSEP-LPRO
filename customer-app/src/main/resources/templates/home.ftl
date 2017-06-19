@@ -17,8 +17,8 @@
 <h1>${serviceName}</h1>
 
 <ul>
-    <li><a href="<@spring.url '/customers' />">Customer Listing</a></li>
-    <li><a href="<@spring.url '/sqlCustomers' />">Sql Customer Listing</a></li>
+    <li><a href="<@spring.url '/customers' />">Pristup NoSql bazi</a></li>
+    <li><a href="<@spring.url '/sqlCustomers' />">Pristup Sql bazi</a></li>
     <li><a href="<@spring.url '/admin' />">Customer Admin Page</a></li>
 </ul>
 </body>

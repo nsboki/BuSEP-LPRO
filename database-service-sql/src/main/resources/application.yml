@@ -1,0 +1,15 @@
+server:
+  port: 9091
+  context-path: /databases
+  
+spring:
+  freemarker:
+    cache: false
+  datasource:
+    url:   jdbc:mysql://localhost:3306/laxablo?useSSL=false
+    username: laxabloUser
+    password: qwer1234
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update

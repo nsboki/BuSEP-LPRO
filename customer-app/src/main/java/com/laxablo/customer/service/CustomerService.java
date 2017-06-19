@@ -2,6 +2,8 @@ package com.laxablo.customer.service;
 
 import java.util.List;
 
+import com.laxablo.customer.entity.CustomerEntity;
+
 /**
  * Created by Boki
  */
@@ -12,5 +14,7 @@ public interface CustomerService {
      */
     List<String> getCustomers();
 
-	List<String> getCustomersFromSql();
+	List<CustomerEntity> getCustomersFromSql();
+
+	CustomerEntity getCustomer(Long id);
 }

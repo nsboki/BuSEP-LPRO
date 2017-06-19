@@ -16,13 +16,13 @@ import java.util.List;
  * Customer API controller.
  */
 @RestController
-@RequestMapping("/customers")
+//@RequestMapping("/customers")
 @CacheControl(policy = CachePolicy.NO_CACHE)
 public class CustomerApiController {
 
     private static final Logger log = LoggerFactory.getLogger(CustomerApiController.class);
 
-    @RequestMapping(method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
+    @RequestMapping(method = RequestMethod.GET, value="/customers", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<String> getCustomers() {
 
         log.info("Returning customer list.");

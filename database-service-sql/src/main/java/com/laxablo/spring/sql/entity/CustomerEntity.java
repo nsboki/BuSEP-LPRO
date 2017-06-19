@@ -7,12 +7,24 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="lax_customer_1")
+@Table(name="lax_customer")
 public class CustomerEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
 	private String name;
+	
+	
+	
+	public CustomerEntity(String name) {
+		super();
+		
+		this.name = name;
+	}
+	public CustomerEntity() {
+		super();
+		this.name ="name" + this.id;
+	}
 	public Long getId() {
 		return id;
 	}

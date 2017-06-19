@@ -77,4 +77,4 @@ If you click on the logout link of either of the product or customer app, you'll
 ## Admin Console
 
 http://localhost:8080/auth/admin/index.html
-# bezbednost
+
