@@ -33,7 +33,7 @@ public class CustomerApiController {
     
     @RequestMapping(method = RequestMethod.GET, value="/customers", produces = MediaType.APPLICATION_JSON_VALUE)
     public List<CustomerEntity> getCustomers() {
-
+    	
         log.info("Returning customer list.");
         return customerService.getAllCustomers();
     }

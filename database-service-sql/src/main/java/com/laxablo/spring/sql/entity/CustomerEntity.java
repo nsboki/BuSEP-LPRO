@@ -9,6 +9,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name="lax_customer")
 public class CustomerEntity {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;

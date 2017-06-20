@@ -7,6 +7,8 @@ Demonstrates how one or more then one aplication with the Keycloak Spring Securi
 * Distributed Logout
 * OAuth2 Bearer Tokens
 
+Application product-app is for customers, where they can find all your products. Comu
+
 ## Requirements
 
 The following examples are standalone Spring Boot applications.
@@ -17,10 +19,10 @@ standalone appliance).
 There are multiple Spring Boot projects.  These will all run on independently on the localhost
 listening on differnt ports.
 
-* **customer-app** A Spring Boot application that does remote login using OAuth2 browser redirects with the auth server
-* **product-app** A Spring Boot application that does remote login using OAuth2 browser redirects with the auth server
-* **database-service-sql** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data.
-* **database-service-nosql** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data.
+* **customer-app** A Spring Boot application that does remote login using OAuth2 browser redirects with the auth server. Application 4 employee who work with customers. App communicate with both database-services.
+* **product-app** A Spring Boot application that does remote login using OAuth2 browser redirects with the auth server. Application 4 customers, where are theirs products. App communicate with both database-services. 
+* **database-service-sql** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data. Work with MySql.
+* **database-service-nosql** A Spring Boot RESTful application service authenticated by bearer tokens only. The customer and product app invoke it to get data. Work with MongoDB
 
 
 ### Step 1: Make sure you've set up the Keycloak Server

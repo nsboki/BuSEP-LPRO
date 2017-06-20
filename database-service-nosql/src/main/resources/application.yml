@@ -1,3 +1,10 @@
 server:
   port: 9099
   contextPath: /databasens
+
+spring:
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: busep_lpro_mnogo_db

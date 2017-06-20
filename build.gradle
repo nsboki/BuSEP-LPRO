@@ -61,6 +61,12 @@ project('database-service-sql') {
     }
 }
 
+project('database-service-nosql') {
+    dependencies {
+        compile("org.springframework.boot:spring-boot-starter-data-mongodb")
+    }
+}
+
 
 project('product-app') {
     dependencies {
