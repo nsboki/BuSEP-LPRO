@@ -1,3 +1,4 @@
+
 # BuSEP-LPRO with Keycloak Spring Security
 
 Demonstrates how one or more then one aplication with the Keycloak Spring Security adapter, including:
@@ -7,7 +8,6 @@ Demonstrates how one or more then one aplication with the Keycloak Spring Securi
 * Distributed Logout
 * OAuth2 Bearer Tokens
 
-Application product-app is for customers, where they can find all your products. Comu
 
 ## Requirements
 
